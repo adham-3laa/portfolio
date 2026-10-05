@@ -1,0 +1,19 @@
+{
+  "name": "adham-alaa-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio for Adham Alaa — Back-End .NET Developer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^4.5.5"
+  },
+  "dependencies": {
+    "lenis": "^1.1.14"
+  }
+}

@@ -1,0 +1,271 @@
+/* ==========================================================================
+   portrait.css
+   Hero portrait presentation — frameless editorial cutout with atmospheric
+   depth. No visible rectangular borders or card frames.
+   ========================================================================== */
+
+/* ── Scene wrapper: perspective parent ───────────────────────────────────── */
+
+.hero__portrait-scene {
+  position: relative;
+  /* Much larger — fills the visual column generously */
+  width: min(100%, 38rem);
+  /* Scroll parallax driven by hero.ts */
+  transform: translateY(var(--scroll-parallax-y, 0));
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 0, 0, 1),
+    transform 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+/* Intro: only hide + shift when JS is running */
+[data-js='true'] .hero__portrait-scene:not(.is-visible) {
+  opacity: 0;
+  transform: translateX(32px) translateY(var(--scroll-parallax-y, 0));
+}
+
+/* Revealed state */
+.hero__portrait-scene.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(var(--scroll-parallax-y, 0));
+}
+
+/* ── Perspective container ────────────────────────────────────────────────── */
+
+.portrait-stack {
+  position: relative;
+  perspective: 1200px;
+  /* Taller ratio — more upper-body / mid-thigh editorial crop */
+  aspect-ratio: 3 / 4;
+  /* Tilt driven by CSS variables (portrait.ts sets --tilt-x / --tilt-y) */
+  transform:
+    rotateX(var(--tilt-x, 1.5deg))
+    rotateY(var(--tilt-y, -3deg));
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+/* ── Background atmosphere layer ─────────────────────────────────────────── */
+/* Replaces the old visible rectangular frame with a soft atmospheric glow
+   behind the portrait — creates depth without any border or box edge. */
+
+.portrait-layer--back {
+  position: absolute;
+  /* Spread wider and taller than the image for atmospheric bleed */
+  inset: -8% -12%;
+  border: none;
+  border-radius: 50%;
+  /* Soft radial atmosphere — monochrome only */
+  background: radial-gradient(
+    60% 55% at 50% 45%,
+    hsla(0, 0%, 18%, 0.55) 0%,
+    hsla(0, 0%, 12%, 0.3) 35%,
+    hsla(0, 0%, 8%, 0.1) 65%,
+    transparent 100%
+  );
+  /* Push behind the photo in Z space */
+  transform: translateZ(-20px);
+  /* No box-shadow rectangle — use filter blur for felt atmospheric mass */
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* ── Photo / image layer ─────────────────────────────────────────────────── */
+
+.portrait-layer--image {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transform: translateZ(0);
+  /* Clip the bottom edge cleanly so nothing leaks outside the composition */
+  overflow: hidden;
+  /* Premium blend: use an alpha mask instead of an overlay for natural transparency */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 70%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 70%,
+    transparent 100%
+  );
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Bias the focal point to center the face and torso prominently */
+  object-position: center 15%;
+  /* Cinematic monochrome treatment — slightly boosted contrast for depth */
+  filter:
+    grayscale(100%)
+    contrast(1.08)
+    brightness(0.94)
+    drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  display: block;
+  /* Subtle scale to fill more of the composition area */
+  transform: scale(1.05);
+  transform-origin: center 20%;
+}
+
+/* Portrait placeholder (used until a real photo is supplied) */
+.portrait-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    175deg,
+    hsl(0 0% 14%) 0%,
+    hsl(0 0% 9%) 40%,
+    hsl(0 0% 6%) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.portrait-placeholder__initials {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  color: var(--color-text-title);
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  opacity: 0.85;
+}
+
+.portrait-placeholder__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
+
+/* ── Foreground depth layer ──────────────────────────────────────────────── */
+/* Removed the old visible border frame + corner accents.
+   Now purely a very subtle atmospheric overlay for tonal separation — invisible
+   as a rectangle, but adds a whisper of dimensional depth in front. */
+
+.portrait-layer--front {
+  position: absolute;
+  inset: 0;
+  border: none;
+  z-index: 4;
+  pointer-events: none;
+  transform: translateZ(16px);
+  background: transparent;
+  /* Extremely subtle vignette overlay for cinematic edge darkening */
+  box-shadow: inset 0 0 80px 20px hsla(0, 0%, 0%, 0.12);
+}
+
+/* Remove corner accents — no longer needed */
+.portrait-layer--front::before,
+.portrait-layer--front::after {
+  display: none;
+}
+
+/* ── Coordinate tag ──────────────────────────────────────────────────────── */
+
+.portrait-tag {
+  position: absolute;
+  bottom: calc(-1 * var(--space-lg));
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-soft);
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ── Mobile: no tilt, full premium through shadow + atmosphere ──────────── */
+
+@media (hover: none), (pointer: coarse) {
+  .portrait-stack {
+    transform: rotateX(1deg) rotateY(-2deg);
+    transition: none;
+    will-change: auto;
+  }
+
+  .portrait-layer--back {
+    transform: translateZ(0);
+  }
+
+  .portrait-layer--front {
+    transform: translateZ(0);
+  }
+
+  .hero__portrait-scene {
+    transform: none !important;
+    will-change: auto;
+  }
+}
+
+/* ── Responsive: tablet ──────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .hero__portrait-scene {
+    width: min(100%, 28rem);
+  }
+}
+
+/* ── Responsive: mobile ──────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .hero__portrait-scene {
+    width: min(100%, 22rem);
+  }
+
+  .portrait-layer--back {
+    inset: -6% -8%;
+  }
+
+  .portrait-tag {
+    bottom: calc(-1 * var(--space-sm));
+  }
+
+  /* Adjust mask fade height on mobile so face stays fully visible */
+  .portrait-layer--image {
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+  }
+}
+
+/* ── Small mobile ────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .hero__portrait-scene {
+    width: min(100%, 18rem);
+  }
+
+  .portrait-layer--image {
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+  }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__portrait-scene {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .portrait-stack {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .portrait-layer--back,
+  .portrait-layer--front {
+    transform: none !important;
+  }
+}

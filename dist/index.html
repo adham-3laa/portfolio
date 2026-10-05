@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>Adham Alaa - Back-End .NET Developer</title>
+    <meta
+      name="description"
+      content="Personal portfolio of Adham Alaa, a Back-End .NET Developer focused on ASP.NET Core, Entity Framework, SQL Server, and maintainable backend architecture."
+    />
+    <meta name="author" content="Adham Alaa" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/" />
+    <meta property="og:title" content="Adham Alaa - Back-End .NET Developer" />
+    <meta
+      property="og:description"
+      content="Back-End .NET Developer portfolio with real-world systems, technical depth, and clear architectural direction."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Adham Alaa Portfolio" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Adham Alaa - Back-End .NET Developer" />
+    <meta
+      name="twitter:description"
+      content="Back-End .NET Developer portfolio with real-world systems, technical depth, and clear architectural direction."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Prata&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Prata&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Prata&display=swap"
+      />
+    </noscript>
+    
+    <script type="module" crossorigin src="/assets/main-6d741e9a.js"></script>
+    <link rel="stylesheet" href="/assets/index-5f5637cc.css">
+  </head>
+  <body>
+    <div id="app">
+      <a class="skip-link" href="#site-main">Skip to main content</a>
+      <div class="site-spine" aria-hidden="true"></div>
+
+      <header class="site-header" id="site-header">
+        <div class="container">
+          <a class="site-header__logo" href="#hero" aria-label="Adham Alaa home">
+            A.A
+          </a>
+
+          <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+            <ul class="site-nav__list" role="list">
+              <li>
+                <a
+                  class="site-nav__link"
+                  href="#about"
+                  id="nav-about"
+                  aria-label="Navigate to About section"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  class="site-nav__link"
+                  href="#skills"
+                  id="nav-skills"
+                  aria-label="Navigate to Skills section"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  class="site-nav__link"
+                  href="#project-alalamia"
+                  id="nav-projects"
+                  aria-label="Navigate to Projects section"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  class="site-nav__link"
+                  href="#certification"
+                  id="nav-certification"
+                  aria-label="Navigate to Certification section"
+                >
+                  Certification
+                </a>
+              </li>
+              <li>
+                <a
+                  class="site-nav__link"
+                  href="#contact"
+                  id="nav-contact"
+                  aria-label="Navigate to Contact section"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            class="mobile-nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-nav-drawer"
+            aria-expanded="false"
+            data-mobile-nav-toggle
+          >
+            <span class="mobile-nav-toggle__line" aria-hidden="true"></span>
+            <span class="mobile-nav-toggle__line" aria-hidden="true"></span>
+            <span class="mobile-nav-toggle__line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-nav-overlay" aria-hidden="true" data-mobile-nav-overlay></div>
+      <aside
+        class="mobile-nav-drawer"
+        id="mobile-nav-drawer"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+        tabindex="-1"
+        inert
+      >
+        <div class="mobile-nav-drawer__header">
+          <span class="mobile-nav-drawer__title">Navigate</span>
+          <button
+            class="mobile-nav-close"
+            type="button"
+            aria-label="Close navigation menu"
+            data-mobile-nav-close
+          >
+            Close
+          </button>
+        </div>
+
+        <nav class="mobile-nav" aria-label="Mobile primary navigation">
+          <ul class="mobile-nav__list" role="list">
+            <li><a class="mobile-nav__link" href="#about">About</a></li>
+            <li><a class="mobile-nav__link" href="#skills">Skills</a></li>
+            <li><a class="mobile-nav__link" href="#project-alalamia">Projects</a></li>
+            <li><a class="mobile-nav__link" href="#certification">Certification</a></li>
+            <li><a class="mobile-nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="site-main" id="site-main" tabindex="-1">
+        <section class="section" id="hero" aria-labelledby="hero-heading">
+          <div class="container">
+            <div class="hero__grid">
+
+              <!-- Left: copy -->
+              <div class="hero__content">
+
+                <span class="hero__label" aria-hidden="true">// 01 — Identity</span>
+
+                <h1 class="hero__name" id="hero-heading">
+                  Adham<br />Alaa
+                </h1>
+
+                <!-- role text: words are wrapped by hero.ts for reveal -->
+                <p class="hero__role" aria-label="Back-End .NET Developer">
+                  Back-End .NET Developer
+                </p>
+
+                <p class="hero__lead">
+                  I architect backend systems with deliberate structure —
+                  clean layers, maintainable contracts, and production-grade reliability.
+                </p>
+
+                <div class="hero__ctas">
+                  <a
+                    class="cta cta--primary"
+                    href="#project-alalamia"
+                    id="cta-view-projects"
+                    aria-label="View Projects"
+                  >
+                    View Projects
+                  </a>
+                  <a
+                    class="cta cta--secondary"
+                    href="/cv.pdf"
+                    id="cta-download-cv"
+                    download
+                    aria-label="Download CV"
+                  >
+                    Download CV
+                  </a>
+                </div>
+
+                <p class="hero__scroll-hint" aria-hidden="true">Scroll to explore</p>
+              </div>
+
+              <!-- Right: portrait composition -->
+              <div class="hero__visual">
+                <div
+                  class="hero__portrait-scene"
+                  aria-label="Portrait of Adham Alaa"
+                  role="img"
+                >
+                  <div class="portrait-stack">
+
+                    <!-- Layer 1: background frame (deepest, offset lower-left) -->
+                    <div class="portrait-layer portrait-layer--back" aria-hidden="true"></div>
+
+                    <!-- Layer 2: photo -->
+                    <div class="portrait-layer portrait-layer--image">
+                      <img
+                        class="portrait-img"
+                        src="/portrait.webp"
+                        srcset="/portrait-400.webp 400w, /portrait-800.webp 800w"
+                        sizes="(max-width:768px) 18rem, 26rem"
+                        alt="Adham Alaa — Back-End .NET Developer"
+                        width="800"
+                        height="1066"
+                        loading="eager"
+                        decoding="async"
+                      />
+                    </div>
+
+                    <!-- Layer 3: foreground ghost frame (closest, floating in front) -->
+                    <div class="portrait-layer portrait-layer--front" aria-hidden="true"></div>
+
+                  </div>
+
+                  <!-- Coordinate tag — architectural flavor, purely decorative -->
+                  <p class="portrait-tag" aria-hidden="true">AA / Cairo, EG</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section class="section section--alt" id="about" aria-labelledby="about-heading">
+          <div class="container">
+            <span class="section__label" aria-hidden="true">// 02</span>
+            <h2 class="section__title" id="about-heading">About</h2>
+
+            <div class="about__content surface-panel">
+              <p class="section__body">
+                Back-End .NET Developer with hands-on experience building production-grade web
+                applications using ASP.NET Core MVC, Web API, Entity Framework Core, and SQL
+                Server. I design systems with clean architecture principles, including Onion
+                Architecture, Repository Pattern, and Unit of Work.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section class="section" id="skills" aria-labelledby="skills-heading">
+          <div class="container">
+            <span class="section__label" aria-hidden="true">// 03</span>
+            <h2 class="section__title" id="skills-heading">Technical Expertise</h2>
+
+            <!-- skills__placeholder-grid: removed by skills.ts at runtime. -->
+            <!-- This fallback is shown only when JS is absent or fails.   -->
+            <div class="skills__placeholder-grid skills__fallback">
+              <div class="skills__fallback-group">
+                <h3 class="skills__fallback-heading">Core Backend</h3>
+                <ul class="skills__fallback-list" role="list">
+                  <li>C#</li>
+                  <li>OOP &amp; LINQ</li>
+                  <li>ASP.NET Core MVC</li>
+                  <li>ASP.NET Core Web API</li>
+                  <li>Entity Framework Core</li>
+                  <li>Dapper</li>
+                  <li>SignalR</li>
+                </ul>
+              </div>
+
+              <div class="skills__fallback-group">
+                <h3 class="skills__fallback-heading">Database &amp; Data</h3>
+                <ul class="skills__fallback-list" role="list">
+                  <li>SQL Server</li>
+                  <li>Database Design</li>
+                  <li>Stored Procedures, Functions &amp; Triggers</li>
+                  <li>Indexing</li>
+                  <li>Redis</li>
+                </ul>
+              </div>
+
+              <div class="skills__fallback-group">
+                <h3 class="skills__fallback-heading">Architecture &amp; Patterns</h3>
+                <ul class="skills__fallback-list" role="list">
+                  <li>Onion Architecture</li>
+                  <li>3-Tier Architecture</li>
+                  <li>Repository Pattern</li>
+                  <li>Unit of Work</li>
+                  <li>Dependency Injection</li>
+                </ul>
+              </div>
+
+              <div class="skills__fallback-group">
+                <h3 class="skills__fallback-heading">Tools &amp; Delivery</h3>
+                <ul class="skills__fallback-list" role="list">
+                  <li>Git &amp; GitHub</li>
+                  <li>Swagger &amp; Postman</li>
+                  <li>AutoMapper</li>
+                  <li>IIS</li>
+                  <li>HTML &amp; CSS</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- skills__note: also removed by skills.ts at runtime. -->
+            <p class="skills__note">
+              C#, ASP.NET Core MVC, ASP.NET Core Web API, Entity Framework Core, Dapper, SQL
+              Server, Redis, SignalR, AutoMapper, Onion Architecture, Repository Pattern, Unit of
+              Work, Dependency Injection, Git, GitHub, Swagger, Postman, IIS, HTML, CSS.
+            </p>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section
+          class="section section--alt"
+          id="project-alalamia"
+          aria-labelledby="project-alalamia-heading"
+        >
+          <div class="container">
+            <div class="project-showcase">
+
+              <div class="project-showcase__visual">
+                <div class="project-frame">
+                  <div class="project-frame__bar">
+                    <span class="project-frame__dot"></span>
+                    <span class="project-frame__dot"></span>
+                    <span class="project-frame__dot"></span>
+                  </div>
+                  <div class="project-frame__content">
+                    <i data-icon="car" data-icon-size="48" class="project-frame__icon"></i>
+                    <p class="project-frame__label">Project Visual Setup pending</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-showcase__content">
+                <div class="project-header">
+                  <div class="project-header__top">
+                    <div class="project-icon">
+                      <i data-icon="car" data-icon-size="18"></i>
+                    </div>
+                    <span class="section__label" aria-hidden="true">// 04 — Enterprise System</span>
+                  </div>
+                  <h2 class="section__title project-header__title" id="project-alalamia-heading">Al-Alamia Cars</h2>
+                  <p class="project-description">
+                    Car dealership operations and financial management system.
+                  </p>
+                </div>
+
+                <div class="feature-list">
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="car" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Inventory & Sales:</strong> Comprehensive vehicle lifecycle tracking to direct sales and deferred-cash operations.</p>
+                  </div>
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="receipt" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Installments Platform:</strong> Contract management, schedule generation, and automated settlement workflows.</p>
+                  </div>
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="bank" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Treasury & Settlement:</strong> Real-time financial logging and dynamic multi-partner ownership resolution.</p>
+                  </div>
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="users" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Partner Logic:</strong> Complex ownership distribution, dynamically settling investors upon car payout.</p>
+                  </div>
+                </div>
+
+                <div class="tech-badges">
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="csharp" data-icon-size="14"></i> C#</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="aspnet-mvc" data-icon-size="14"></i> ASP.NET MVC</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="efcore" data-icon-size="14"></i> EF Core</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="dapper" data-icon-size="14"></i> Dapper</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="sqlserver" data-icon-size="14"></i> SQL Server</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="onion-arch" data-icon-size="14"></i> Onion Architecture</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section class="section" id="project-clinic" aria-labelledby="project-clinic-heading">
+          <div class="container">
+            <div class="project-showcase project-showcase--mirrored">
+
+              <div class="project-showcase__visual">
+                <div
+                  class="clinic-3d-composition"
+                  aria-label="Clinic Management System screenshot gallery preview"
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                >
+                  <div class="clinic-drum-stage" aria-hidden="true">
+                    <div class="clinic-drum-track">
+                      <figure class="clinic-stack-layer clinic-stack-layer--front" data-role="front">
+                        <img src="/assets/1-152d414b.jpeg" alt="Clinic Management Dashboard" loading="lazy" decoding="async">
+                      </figure>
+                      <figure class="clinic-stack-layer clinic-stack-layer--mid" data-role="mid">
+                        <img src="/assets/2-1185b605.jpeg" alt="Clinic Patient Profile View" loading="lazy" decoding="async">
+                      </figure>
+                      <figure class="clinic-stack-layer clinic-stack-layer--back" data-role="back">
+                        <img src="/assets/3-0d21769a.jpeg" alt="Clinic Schedule View" loading="lazy" decoding="async">
+                      </figure>
+                      <figure class="clinic-stack-layer clinic-stack-layer--far" data-role="far">
+                        <img src="/assets/4-b4e05773.jpeg" alt="Clinic Operations Snapshot" loading="lazy" decoding="async">
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="clinic-shadow-pool" aria-hidden="true"></div>
+                  <p class="clinic-hint" aria-hidden="true">// auto-rotating 3D preview &rarr; click or press enter</p>
+                </div>
+              </div>
+
+              <div class="project-showcase__content">
+                <div class="project-header">
+                  <div class="project-header__top">
+                    <div class="project-icon">
+                      <i data-icon="heart-pulse" data-icon-size="18"></i>
+                    </div>
+                    <span class="section__label" aria-hidden="true">// 05 - Operational Platform</span>
+                  </div>
+                  <h2 class="section__title project-header__title" id="project-clinic-heading">Clinic Management System</h2>
+                  <p class="project-description">
+                    A multi-role, operations-first backend platform used by front-desk reception, clinic administration, and treatment teams to keep intake, assessments, package sessions, bookings, and staff presence aligned in one controlled workflow.
+                  </p>
+                </div>
+
+                <div class="clinic-flow-rail" aria-label="Primary operational flow">
+                  <span class="clinic-flow-rail__label" aria-hidden="true">// care workflow</span>
+                  <p class="clinic-flow-rail__text">
+                    Registration <span aria-hidden="true">&rarr;</span> Clinical Assessment <span aria-hidden="true">&rarr;</span> Package Assignment <span aria-hidden="true">&rarr;</span> Session Tracking <span aria-hidden="true">&rarr;</span> Appointment Validation <span aria-hidden="true">&rarr;</span> Staff Attendance
+                  </p>
+                </div>
+
+                <div class="feature-list">
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="users" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Patient Intake to Evaluation:</strong> Every patient starts with registration and a structured clinical check, then treatment packages are assigned on top of that assessment so care decisions stay tied to a reliable record.</p>
+                  </div>
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="receipt" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Package Ledger &amp; Session Consumption:</strong> Sessions are consumed only against active treatment packages, with used and remaining balances always visible, giving the clinic a clear treatment-progress and entitlement view.</p>
+                  </div>
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="calendar" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Scheduling Rules &amp; Visit Outcomes:</strong> Appointments are not just calendar slots; they are validated against clinic operating rules, then recorded as attended, missed, or cancelled to keep booking history accurate and auditable.</p>
+                  </div>
+                  <div class="feature-row">
+                    <i class="feature-row__icon" data-icon="clock" data-icon-size="16"></i>
+                    <p class="feature-row__text"><strong>Staff Presence &amp; Shift Accountability:</strong> Intern doctor attendance is logged per working session, and receptionist shift start/end is captured through a controlled workflow so administration can track day-level staff presence.</p>
+                  </div>
+                </div>
+
+                <div class="clinic-admin-grid" aria-label="Operational impact">
+                  <article class="clinic-admin-card">
+                    <h3 class="clinic-admin-card__title">How The Day Runs</h3>
+                    <p class="clinic-admin-card__text">Front-desk, treatment staff, and administration share one timeline, giving a clear day-level view of what is booked, attended, missed, consumed, or still pending.</p>
+                  </article>
+                  <article class="clinic-admin-card">
+                    <h3 class="clinic-admin-card__title">Administrative Value</h3>
+                    <p class="clinic-admin-card__text">By replacing fragmented manual follow-up with one backend source of truth, the clinic runs with cleaner scheduling, faster status checks, and stronger daily operational control.</p>
+                  </article>
+                </div>
+
+                <div class="clinic-workflow-summary" aria-label="Operational summary">
+                  <span class="clinic-workflow-summary__label" aria-hidden="true">// operational value</span>
+                  <p class="clinic-workflow-summary__text">
+                    Built as a serious multi-role business system, not a demo CRUD app: it coordinates patient flow, package/session accounting, booking integrity, and staff administration across the full clinic day.
+                  </p>
+                </div>
+
+                <div class="tech-badges tech-badges--clinic">
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="csharp" data-icon-size="14"></i> C#</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="aspnet-mvc" data-icon-size="14"></i> ASP.NET Core MVC</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="efcore" data-icon-size="14"></i> EF Core</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="sqlserver" data-icon-size="14"></i> SQL Server</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="automapper" data-icon-size="14"></i> AutoMapper</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="linq" data-icon-size="14"></i> LINQ</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section class="section section--alt" id="training" aria-labelledby="training-heading">
+          <div class="container">
+            <span class="section__label" aria-hidden="true">// 06</span>
+            <h2 class="section__title" id="training-heading">Training</h2>
+
+            <div class="training-block">
+              <div class="training-block__main">
+                <div class="training-block__header">
+                  <div class="project-icon project-icon--compact">
+                    <i data-icon="shopping-cart" data-icon-size="16"></i>
+                  </div>
+                  <h3 class="training-block__title">E-Commerce API</h3>
+                </div>
+                <p class="project-description project-description--sm">
+                  RESTful API training project built during the ASP.NET Core Web API track at Route
+                  Academy. Covers product workflows, cart operations, authentication, and payment
+                  integration with a backend-first architecture.
+                </p>
+                <div class="tech-badges">
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="aspnet-api" data-icon-size="14"></i> Web API</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="lock" data-icon-size="14"></i> Authentication</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="redis" data-icon-size="14"></i> Redis</span>
+                  <span class="tech-badge"><i class="tech-badge__icon" data-icon="swagger" data-icon-size="14"></i> Swagger</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section class="section" id="certification" aria-labelledby="certification-heading">
+          <div class="container">
+            <span class="section__label" aria-hidden="true">// 07</span>
+            <h2 class="section__title" id="certification-heading">Certification</h2>
+
+            <div class="cert-block surface-panel" role="region" aria-label="Route Academy certification">
+              <div class="cert-block__header">
+                <i class="feature-row__icon cert-block__icon" data-icon="certificate" data-icon-size="20"></i>
+                <h3 class="cert-block__title">ASP.NET Core Track - C44</h3>
+              </div>
+              <p class="cert-block__issuer">Route Academy</p>
+              <p class="cert-block__date">Issued: 19 December 2025</p>
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-separator" aria-hidden="true" />
+
+        <section class="section section--alt" id="contact" aria-labelledby="contact-heading">
+          <div class="container">
+            <span class="section__label" aria-hidden="true">// 08</span>
+            <h2 class="section__title" id="contact-heading">Contact</h2>
+
+            <p class="contact__text">
+              Open to back-end engineering opportunities. If you have a role, project, or technical
+              discussion in mind, feel free to connect.
+            </p>
+
+            <div class="placeholder-block contact__placeholder">
+              <p class="placeholder-block__title">Contact Methods Placeholder</p>
+              <ul class="contact__list" role="list">
+                <li>Email channel slot</li>
+                <li>GitHub profile slot</li>
+                <li>LinkedIn profile slot</li>
+              </ul>
+              <p class="placeholder-block__meta">
+                Direct links stay intentionally deferred for now.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="site-footer">
+        <div class="container">
+          <p class="site-footer__copy">&copy; 2026 Adham Alaa. All rights reserved.</p>
+          <p class="site-footer__copy">Back-End .NET Developer</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

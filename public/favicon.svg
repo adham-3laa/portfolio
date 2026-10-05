@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Carbon black background -->
+  <rect width="32" height="32" fill="hsl(0,0%,4%)"/>
+  <!-- Vertical spine line -->
+  <line x1="16" y1="4" x2="16" y2="28" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <!-- A.A monogram — left A stroke -->
+  <text
+    x="8"
+    y="22"
+    font-family="Georgia, serif"
+    font-size="14"
+    font-weight="700"
+    fill="hsl(0,0%,96%)"
+    text-anchor="middle"
+  >A</text>
+  <!-- A.A monogram — right A stroke -->
+  <text
+    x="24"
+    y="22"
+    font-family="Georgia, serif"
+    font-size="14"
+    font-weight="700"
+    fill="hsl(0,0%,96%)"
+    text-anchor="middle"
+  >A</text>
+</svg>

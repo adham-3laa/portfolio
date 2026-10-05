@@ -1,0 +1,85 @@
+/* ==========================================================================
+   contact.css
+   Phase 8 — Premium contact cards with hover effects and grid layout.
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  text-decoration: none;
+  transition: transform var(--transition-md), border-color var(--transition-md), background-color var(--transition-md);
+}
+
+.contact-card:hover {
+  transform: translateY(-0.25rem);
+  border-color: var(--color-border-hover, var(--color-text-dim));
+  background-color: var(--color-surface-hover, rgba(255, 255, 255, 0.02));
+}
+
+.contact-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--color-surface-sunken, rgba(0, 0, 0, 0.2));
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-dim);
+  transition: color var(--transition-md), border-color var(--transition-md);
+}
+
+.contact-card:hover .contact-card__icon {
+  color: var(--color-text);
+  border-color: var(--color-text-dim);
+}
+
+.contact-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.contact-card__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.contact-card__value {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-card__arrow {
+  color: var(--color-text-muted);
+  opacity: 0.3;
+  transition: opacity var(--transition-md), transform var(--transition-md);
+}
+
+.contact-card:hover .contact-card__arrow {
+  opacity: 1;
+  transform: translate(0.125rem, -0.125rem);
+}
+
+@media (max-width: 48rem) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

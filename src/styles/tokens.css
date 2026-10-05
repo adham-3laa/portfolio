@@ -1,0 +1,108 @@
+/* ==========================================================================
+   tokens.css
+   Phase 2 visual token and typography foundation.
+   ========================================================================== */
+
+:root {
+  /* Color system: monochrome only */
+  --color-bg-page: hsl(0 0% 4%);
+  --color-bg-layer-top: hsl(0 0% 6%);
+  --color-bg-section: hsl(0 0% 7%);
+  --color-bg-section-alt: hsl(0 0% 9%);
+  --color-bg-panel: hsl(0 0% 10%);
+  --color-bg-panel-strong: hsl(0 0% 12%);
+  --color-bg-header: hsla(0 0% 4% / 0.94);
+
+  --color-text-title: hsl(0 0% 96%);
+  --color-text-body: hsl(0 0% 84%);
+  --color-text-muted: hsl(0 0% 65%);
+  --color-text-soft: hsl(0 0% 50%);
+  --color-text-label: hsl(0 0% 74%);
+  --color-text-inverse: hsl(0 0% 6%);
+
+  --color-border-subtle: hsl(0 0% 16%);
+  --color-border-default: hsl(0 0% 22%);
+  --color-border-strong: hsl(0 0% 30%);
+  --color-divider: hsla(0 0% 100% / 0.1);
+  --color-spine: hsla(0 0% 100% / 0.11);
+  --color-focus: hsl(0 0% 100%);
+
+  /* Spacing scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* Layout rhythm */
+  --layout-max-width: 90rem;
+  --layout-container-padding: clamp(1rem, 3vw, 3rem);
+  --layout-grid-columns: 12;
+  --layout-grid-gap: clamp(0.75rem, 1.5vw, 2rem);
+  --header-height: 4.5rem;
+
+  --section-padding-desktop: clamp(5rem, 11vw, 10rem);
+  --section-padding-tablet: clamp(4rem, 9vw, 7rem);
+  --section-padding-mobile: clamp(3rem, 9vw, 4.5rem);
+
+  --content-max-width: 68ch;
+  --meta-max-width: 52ch;
+  --placeholder-min-height: 10rem;
+
+  /* Structural axis */
+  --spine-width: 1px;
+  --spine-position: 50%;
+
+  /* Typography */
+  --font-display: "Prata", "Iowan Old Style", "Times New Roman", serif;
+  --font-body: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", "Consolas", monospace;
+
+  --text-hero: clamp(3rem, 7.8vw, 7.5rem);
+  --text-h1: clamp(2rem, 4.8vw, 3.8rem);
+  --text-h2: clamp(1.5rem, 3vw, 2.4rem);
+  --text-h3: clamp(1.2rem, 2.1vw, 1.5rem);
+  --text-body-lg: clamp(1.02rem, 1.1vw, 1.2rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --leading-display: 1.04;
+  --leading-tight: 1.2;
+  --leading-normal: 1.55;
+  --leading-loose: 1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+  --tracking-widest: 0.28em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Borders and surfaces */
+  --border-subtle: 1px solid var(--color-border-subtle);
+  --border-default: 1px solid var(--color-border-default);
+  --border-strong: 1px solid var(--color-border-strong);
+
+  --radius-none: 0;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+
+  --shadow-soft: 0 18px 44px rgba(0, 0, 0, 0.32);
+  --shadow-deep: 0 32px 64px rgba(0, 0, 0, 0.45);
+
+  /* Layering */
+  --z-below: -1;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-header: 100;
+  --z-skip-link: 200;
+}

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   main.css
+   Phase 6 entry point — imports all style layers including motion layer.
+   ========================================================================== */
+
+@import './tokens.css';
+@import './reset.css';
+@import './typography.css';
+@import './layout.css';
+@import './hero.css';
+@import './portrait.css';
+@import './skills.css';
+@import './projects.css';
+@import './nav.css';
+@import './contact.css';
+@import './responsive.css';
+
+/* ... rest of the file ... */
+.about__content {
+  max-width: 54rem;
+}
+
+/* Skills — layout handled in skills.css */
+
+/* Projects, Training & Certification - handled in projects.css */
+
+/* Contact text styling */
+.contact__text {
+  margin-bottom: var(--space-lg);
+  max-width: 55ch;
+}
